@@ -21,6 +21,8 @@ const contactEmail = nodemailer.createTransport({
   tls: {
     rejectUnauthorized: false
   }
+  connectionTimeout: 5000,
+  socketTimeout: 5000
 });
 
 contactEmail.verify((error) => {
